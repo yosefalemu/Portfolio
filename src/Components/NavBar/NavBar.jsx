@@ -22,7 +22,7 @@ const NavBar = () => {
     <div className="navbarContainer">
       <div className="navbarleft">
         <h1>
-          <img src="./welcome1.png" alt="" className="welcomeImage" />
+          <img src="./images/welcome1.png" alt="" className="welcomeImage" />
         </h1>
       </div>
       <div className="navbarright">

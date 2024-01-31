@@ -1,0 +1,153 @@
+.projectContainer {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  .projectWrapper {
+    width: 65%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .leftArrow {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      cursor: pointer;
+    }
+    .rightArrow {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      cursor: pointer;
+    }
+    .projectTitle {
+      font-size: 52px;
+      text-align: center;
+      justify-content: flex-start;
+      color: rgba(0, 171, 250, 0.217);
+      font-weight: 700;
+    }
+    .wholeContainer {
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      background: rgba(0, 171, 250, 0.217);
+      background: linear-gradient(
+        135deg,
+        rgba(0, 171, 250, 0.1),
+        rgba(0, 171, 250, 0)
+      );
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 15px;
+      .imageContainer {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+      .projectContent {
+        position: absolute;
+        left: 45%;
+        top: 15%;
+        width: 50%;
+        height: 70%;
+        background: linear-gradient(
+          115deg,
+          rgba(2, 26, 37, 1),
+          rgba(0, 171, 250, 0.2)
+        );
+        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13),
+          0 1px 2px 0 rgba(0, 0, 0, 0.11);
+        border-radius: 10px;
+        color: #00abfa;
+        text-align: center;
+        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 30px;
+        h1 {
+          font-size: 24px;
+          color: #fff;
+        }
+        p {
+          font-size: 18px;
+          color: #fff;
+          text-align: left;
+        }
+        .buttonContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .detailButton {
+            font-size: 15px;
+            color: #fff;
+            background: #081b29;
+            cursor: pointer;
+            border-radius: 15px;
+            padding: 15px 25px;
+            border: none;
+          }
+          .githubButton {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: transparent;
+            border: 2px solid #00abfa;
+            cursor: pointer;
+            border-radius: 15px;
+            padding: 5px 15px;
+            p {
+              font-size: 14px;
+              border-radius: 5px;
+              padding: 5px 15px;
+              color: #00abfa;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overlayComponent {
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    top: 5%;
+    margin: auto;
+    background: linear-gradient(
+      135deg,
+      rgba(2, 50, 72, 0.9),
+      rgba(2, 50, 72, 0.9)
+    );
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    padding: 20px;
+    .topContent {
+      display: flex;
+      justify-content: flex-end;
+      .closeButton {
+        cursor: pointer;
+      }
+    }
+    .imageContainer {
+      width: 90%;
+      height: 90%;
+      margin: auto;
+      border: 2px solid #00abfa;
+    }
+  }
+}
