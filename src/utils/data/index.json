@@ -1,0 +1,210 @@
+{
+  "introduction": [
+    {
+      "title": "Hello",
+      "subTitle": "I'm Yosef Alemu Mengstie",
+      "text": "I'm a graduate in electrical and computer engineering from Addis Ababa Institute of Technology. Prior to that, I completed a four-year STEM program at Wollo University, refining skills in Science Technology English and Mathematics."
+    },
+    {
+      "title": "During my time at",
+      "subTitle": "Addis Ababa University",
+      "text": "I immersed myself in diverse engineering knowledge, specializing in electrical and computer fields. Focusing on computer science, I delved into software development intricacies and seamlessly integrated artificial intelligence into my projects."
+    },
+    {
+      "title": "Outside academia",
+      "subTitle": "My university life",
+      "text": "Weaved a rich tapestry. I developed vital social skills—effective communication, collaborative teamwork, meeting deadlines, and thriving in challenges. This journey honed a robust time management ability in me."
+    },
+    {
+      "title": "Explore",
+      "subTitle": "My portfolio",
+      "text": "Highlighting my technical expertise and unwavering passion for the tech world. Delve deeper into my diverse projects, and don't hesitate to reach out for potential collaborations or insights into my journey."
+    }
+  ],
+  "skills": [
+    {
+      "image": "./images/html.png",
+      "title": "HTML",
+      "text": "Markup language for web content.",
+      "category": "frontend",
+      "rating": "95",
+      "color": "linear-gradient(45deg, #e44d26, #f16529)"
+    },
+    {
+      "image": "./images/css.png",
+      "title": "CSS",
+      "text": "Stylesheet language for web design.",
+      "category": "frontend",
+      "rating": "80",
+      "color": "linear-gradient(45deg, #264de4, #2965f1)"
+    },
+    {
+      "image": "./images/python.png",
+      "title": "Python",
+      "text": "High-level programming language known for its readability and versatility.",
+      "category": "programmingLanguages",
+      "rating": "90",
+      "color": "linear-gradient(45deg, #306998, #FDE767)"
+    },
+    {
+      "image": "./images/typescript.png",
+      "title": "TypeScript",
+      "text": "Superset of JavaScript that adds static typing. Enhances code maintainability and scalability in large applications.",
+      "category": "programmingLanguages",
+      "rating": "80",
+      "color": "linear-gradient(45deg, #007acc, #3178c6)"
+    },
+    {
+      "image": "./images/javascript.png",
+      "title": "JavaScript",
+      "text": "High-level programming language for web development.",
+      "category": "frontend",
+      "rating": "80",
+      "color": "linear-gradient(45deg, #f0db4f, #f0db4f)"
+    },
+    {
+      "image": "./images/bootstrap.png",
+      "title": "Bootstrap",
+      "text": "Front-end framework for responsive design.",
+      "category": "frontend",
+      "rating": "85",
+      "color": "linear-gradient(45deg, #563d7c, #7952b3)"
+    },
+    {
+      "image": "./images/material.png",
+      "title": "Material UI",
+      "text": "React UI framework based on Google's Material Design.",
+      "category": "frontend",
+      "rating": "80",
+      "color": "linear-gradient(45deg, #2196f3, #3f51b5)"
+    },
+    {
+      "image": "./images/react.png",
+      "title": "React",
+      "text": "JavaScript library for building user interfaces.",
+      "category": "frontend",
+      "rating": "75",
+      "color": "linear-gradient(45deg, #00d8ff, #00b0ff)"
+    },
+    {
+      "image": "./images/vue.png",
+      "title": "Vue.js",
+      "text": "Progressive JavaScript framework for building user interfaces.",
+      "category": "frontend",
+      "rating": "60",
+      "color": "linear-gradient(45deg, #41b883, #35495e)"
+    },
+    {
+      "image": "./images/angular.png",
+      "title": "Angular",
+      "text": "Platform and framework for building client-side applications with HTML, CSS, and JavaScript/TypeScript.",
+      "category": "frontend",
+      "rating": "70",
+      "color": "linear-gradient(45deg, #dd1b16, #c3002f)"
+    },
+    {
+      "image": "./images/nextjs.png",
+      "title": "Next.js",
+      "text": "React-based framework for building static and dynamic web applications.",
+      "category": "frontend",
+      "rating": "80",
+      "color": "linear-gradient(45deg, #000000, #ffffff)"
+    },
+    {
+      "image": "./images/node.png",
+      "title": "Node.js",
+      "text": "JavaScript runtime for server-side development.",
+      "category": "backend",
+      "rating": "75",
+      "color": "linear-gradient(45deg, #8cc84b, #026e00)"
+    },
+    {
+      "image": "./images/express.png",
+      "title": "Express.js",
+      "text": "Web application framework for Node.js.",
+      "category": "backend",
+      "rating": "80",
+      "color": "linear-gradient(45deg, #222222, #ffffff)"
+    },
+    {
+      "image": "./images/nestjs.png",
+      "title": "Nest.js",
+      "text": "Progressive Node.js framework for building efficient, reliable, and scalable server-side applications.",
+      "category": "backend",
+      "rating": "65",
+      "color": "linear-gradient(45deg, #e0234e, #b52e31)"
+    },
+    {
+      "image": "./images/mongo.png",
+      "title": "MongoDB",
+      "text": "NoSQL database for storing and retrieving data.",
+      "category": "database",
+      "rating": "85",
+      "color": "linear-gradient(45deg, #4db33d, #589636)"
+    },
+    {
+      "image": "./images/sql.png",
+      "title": "SQL",
+      "text": "Structured Query Language for managing relational databases.",
+      "category": "database",
+      "rating": "70",
+      "color": "linear-gradient(45deg, #0173b2, #003366)"
+    },
+    {
+      "image": "./images/mysql.png",
+      "title": "MySQL",
+      "text": "Open-source relational database management system.",
+      "category": "database",
+      "rating": "75",
+      "color": "linear-gradient(45deg, #00758f,#FFA447)"
+    },
+    {
+      "image": "./images/postgress.png",
+      "title": "PostgreSQL",
+      "text": "Open-source relational database management system.",
+      "category": "database",
+      "rating": "70",
+      "color": "linear-gradient(45deg, #336791, #2d5e8d)"
+    },
+    {
+      "image": "./images/firebase.png",
+      "title": "Firebase",
+      "text": "Google's mobile and web application development platform offering various cloud-based services.",
+      "category": "backend",
+      "rating": "75",
+      "color": "linear-gradient(45deg, #ffca28, #ffbb00)"
+    },
+    {
+      "image": "./images/figma.png",
+      "title": "Figma",
+      "text": "Collaborative design tool for creating UI/UX designs.",
+      "category": "design",
+      "rating": "70",
+      "color": "linear-gradient(45deg, #f24e1e, #ff7262)"
+    },
+    {
+      "image": "./images/git.png",
+      "title": "Git",
+      "text": "Distributed version control system for tracking changes in source code during software development.",
+      "category": "versionControl",
+      "rating": "70",
+      "color": "linear-gradient(45deg, #f05032, #d33e1e)"
+    },
+    {
+      "image": "./images/github.png",
+      "title": "GitHub",
+      "text": "Web-based platform for version control using Git.",
+      "category": "versionControl",
+      "rating": "70",
+      "color": "linear-gradient(45deg, #181717, #674586)"
+    },
+    {
+      "image": "./images/postman.png",
+      "title": "Postman",
+      "text": "Collaborative platform for API development and testing.",
+      "category": "tools",
+      "rating": "85",
+      "color": "linear-gradient(45deg, #ff6c37, #ff6117)"
+    }
+  ]
+}

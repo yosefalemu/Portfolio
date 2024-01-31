@@ -1,0 +1,52 @@
+.navbarContainer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 45px;
+  padding: 5px 25px 5px 15px;
+  border-bottom: 2px solid #00abfa;
+  background-color: #081b29;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  .navbarleft {
+    flex: 1;
+    width: 300px;
+    .welcomeImage {
+      width: 95%;
+      object-fit: contain;
+    }
+  }
+
+  .navbarright {
+    flex: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .eachrightelement {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 5px 15px;
+      border: 2px solid #fff;
+      transition: 0.5s;
+      h1 {
+        font-size: 16px;
+      }
+      &:hover {
+        border-color: #00abfa;
+        color: #00abfa;
+      }
+      &.active {
+        border-color: #00abfa;
+        margin-bottom: 20px;
+        color: #00abfa;
+        border-radius: 3px;
+      }
+    }
+  }
+}

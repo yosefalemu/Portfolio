@@ -1,0 +1,60 @@
+.introductionContainer {
+  padding: 0px 100px;
+  .introductionWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 37px;
+    .glass-container {
+      width: 45%;
+      height: 290px;
+      border-radius: 5px;
+      padding: 30px 10px;
+      background: rgba(0, 171, 250, 0.217);
+      background: linear-gradient(
+        135deg,
+        rgba(0, 171, 250, 0.1),
+        rgba(0, 171, 250, 0)
+      );
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      .glass-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+      .title {
+        color: #00abfa;
+        font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: block;
+      }
+      .subTitle {
+        color: #0d6c95;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: block;
+      }
+      .arrowIcon {
+      }
+    }
+  }
+}
+@keyframes animateArrow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.arrowIcon {
+  animation: animateArrow 2s linear infinite;
+}

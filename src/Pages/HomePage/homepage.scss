@@ -1,0 +1,160 @@
+.homepagecontainer {
+  width: 100%;
+
+  .homePageWrapper {
+    position: relative;
+    height: calc(100vh - 80px);
+    z-index: 100;
+    overflow: hidden;
+    .stars {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #00abfa;
+      position: absolute;
+      z-index: 1000;
+    }
+    .contentContainer {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      gap: 50px;
+      .homeLeft {
+        flex: 1;
+        height: 100%;
+        color: #00abfa;
+        z-index: 10;
+        .imagePortfolio {
+          width: 95%;
+          height: 100%;
+          margin: 0px 0px 0px;
+          background-image: url("../../utils/Svg/profileimage3.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          opacity: 0.5;
+          z-index: 1;
+        }
+      }
+
+      .homeRight {
+        flex: 2;
+        color: #00abfa;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 10;
+        padding: 100px 0px;
+
+        .homeRightTop {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .homeRightTopLeft {
+            color: #fff;
+            font-size: 54px;
+            font-family: "Roboto", sans-serif;
+          }
+
+          .homeRightTopRight {
+            color: #00abfa;
+            font-size: 54px;
+            font-family: "Roboto", sans-serif;
+          }
+        }
+
+        .homeRightMiddle {
+          .homeRightMiddleText {
+            color: #fff;
+            font-weight: 400;
+            font-family: "Roboto", sans-serif;
+            font-size: 24px;
+          }
+        }
+
+        .homeRightBottom {
+          display: flex;
+          justify-content: flex-end;
+          padding: 0 50px;
+          align-items: center;
+          gap: 20px;
+          margin-top: 70px;
+          .resumeDownload {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 3px solid #00abfa;
+            color: #00abfa;
+            border-radius: 5px;
+            padding: 5px 15px;
+            width: fit-content;
+            cursor: pointer;
+            background: transparent;
+            transition: color 0.5s;
+            h1 {
+              font-size: 18px;
+            }
+
+            &:hover {
+              scale: 1.1;
+            }
+          }
+          .github {
+            cursor: pointer;
+          }
+          .linkedin {
+            color: #2867b2;
+            cursor: pointer;
+          }
+          .stackOverFlow {
+            color: #f48024;
+            cursor: pointer;
+          }
+          .instagram {
+            cursor: pointer;
+          }
+          .twitter {
+            color: #fff;
+            cursor: pointer;
+          }
+          .telegram {
+            color: #0088cc;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .content {
+      top: 0;
+      right: 0;
+      width: 100%;
+      position: absolute;
+      height: calc(100vh - 80px);
+      background-image: radial-gradient(
+          circle farthest-corner at center,
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0) 90%
+        ),
+        url("../../utils/Svg/background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.1;
+      padding: 50px;
+      z-index: 1;
+      svg {
+        linearGradient {
+          stop:nth-child(1) {
+            stop-color: #fdcb52;
+          }
+          stop:nth-child(2) {
+            stop-color: #ff5b77;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.versionControlContainer {
+  padding: 0px 100px;
+  .versionControlWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 42px;
+    .glass-container {
+      width: 48%;
+      border-radius: 5px;
+      padding: 30px 10px;
+      background: rgba(0, 171, 250, 0.217);
+      background: linear-gradient(
+        135deg,
+        rgba(0, 171, 250, 0.1),
+        rgba(0, 171, 250, 0)
+      );
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      position: relative;
+      .glass-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        transition: 0.3s;
+        .imageContainer {
+          flex: 1;
+        }
+        .itemContent {
+          flex: 2;
+          .rating {
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            .ratingValue {
+              font-weight: 800;
+              font-size: 34px;
+              font-family: "Black Ops One", system-ui;
+            }
+          }
+        }
+      }
+    }
+  }
+}
