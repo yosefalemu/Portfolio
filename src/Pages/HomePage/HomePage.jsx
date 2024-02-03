@@ -1,6 +1,6 @@
 import NavBar from "../../Components/NavBar/NavBar";
 import "./homepage.scss";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { MdOutlineCloudDownload } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -8,9 +8,27 @@ import { FaStackOverflow } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
+import { FaHandsClapping } from "react-icons/fa6";
 import { motion, useAnimation } from "framer-motion";
+import { init } from "ityped";
 
 const HomePage = () => {
+  const textRef = useRef();
+
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 60,
+      strings: [
+        "Web Developer",
+        "Mobile App Developer",
+        "Machine Learning Engineer",
+        "Electrical Engineer",
+      ],
+    });
+  }, []);
+
   const containerVariants = {
     initial: { opacity: 0, y: "-100vh" },
     animate: {
@@ -80,16 +98,22 @@ const HomePage = () => {
           </div>
           <div className="homeRight">
             <div className="homeRightTop">
-              <h1 className="homeRightTopLeft">I AM</h1>
+              <h1 className="homeRightTopLeft">Hi there</h1>
+              <h1 className="homeRightTopRight">
+                <FaHandsClapping
+                  size={45}
+                  color="#FF9843"
+                  className="clappingHand"
+                />
+              </h1>
+            </div>
+            <div className="homeRightTop">
+              <h1 className="homeRightTopLeft">I'm</h1>
               <h1 className="homeRightTopRight">YOSEF ALEMU</h1>
             </div>
             <div className="homeRightMiddle">
-              <h1 className="homeRightMiddleText">
-                Passionate web and mobile developer specializing in AI
-                integration. Transforming ideas into seamless digital
-                experiences that leave a lasting impact. Let's innovate
-                together!
-              </h1>
+              <h1 className="homeRightFreelance">Freelance</h1>
+              <span className="homeRightMiddleText" ref={textRef}></span>
             </div>
             <div className="homeRightBottom">
               <button className="resumeDownload">

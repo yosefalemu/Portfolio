@@ -1,0 +1,131 @@
+.contactContainer {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .contactWrapper {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    border-radius: 25px;
+    background: rgba(0, 171, 250, 0.217);
+    background: linear-gradient(
+      135deg,
+      rgba(0, 171, 250, 0.1),
+      rgba(0, 171, 250, 0)
+    );
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    .contactLeft {
+      flex: 1;
+      height: 100%;
+      padding: 10px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      .eachLeftItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+
+        h1 {
+          color: #00abfa;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+      }
+
+      .socialIcons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+    .contactMiddle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      .socialIcons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: fit-content;
+      }
+    }
+
+    .contactRight {
+      flex: 2;
+      height: 100%;
+      padding: 10px 30px;
+      .rightWrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        gap: 10px;
+        h1 {
+          color: #00abfa;
+          flex: 1;
+        }
+
+        .inputContainer {
+          flex: 12;
+          margin-top: 20px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          input,
+          textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #00abfa;
+            border-radius: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+              border-color: #1877f2;
+            }
+          }
+        }
+
+        button {
+          flex: 1;
+          padding: 10px 20px;
+          background-color: #00abfa;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: #1877f2;
+          }
+        }
+      }
+    }
+  }
+}

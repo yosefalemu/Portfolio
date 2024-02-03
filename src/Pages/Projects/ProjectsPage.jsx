@@ -94,7 +94,7 @@ const ProjectsPage = () => {
                     className="detailButton"
                     onClick={() => setModalOpen(true)}
                   >
-                    View Detail
+                    Preview
                   </button>
                   {projects.githublink === "private" ? (
                     <p className="private">Private Github</p>

@@ -56,7 +56,7 @@ const TestimonialsPage = () => {
                       adipisicing elit. Aperiam rerum architecto cumque.
                       Pariatur maxime velit quod recusandae libero est.
                     </p>
-                    <h2>Web developer at code addict</h2>
+                    <h2>Web developer at coding addict</h2>
                   </div>
                   <img
                     src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
@@ -76,7 +76,7 @@ const TestimonialsPage = () => {
                       adipisicing elit. Aperiam rerum architecto cumque.
                       Pariatur maxime velit quod recusandae libero est.
                     </p>
-                    <h2>Web developer at code addict</h2>
+                    <h2>Web developer at coding addict</h2>
                   </div>
                   <img
                     src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
@@ -96,7 +96,7 @@ const TestimonialsPage = () => {
                       adipisicing elit. Aperiam rerum architecto cumque.
                       Pariatur maxime velit quod recusandae libero est.
                     </p>
-                    <h2>Web developer at code addict</h2>
+                    <h2>Web developer at coding addict</h2>
                   </div>
                   <img
                     src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
@@ -116,7 +116,7 @@ const TestimonialsPage = () => {
                       adipisicing elit. Aperiam rerum architecto cumque.
                       Pariatur maxime velit quod recusandae libero est.
                     </p>
-                    <h2>Web developer at code addict</h2>
+                    <h2>Web developer at coding addict</h2>
                   </div>
                   <img
                     src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
@@ -136,7 +136,7 @@ const TestimonialsPage = () => {
                       adipisicing elit. Aperiam rerum architecto cumque.
                       Pariatur maxime velit quod recusandae libero est.
                     </p>
-                    <h2>Web developer at code addict</h2>
+                    <h2>Web developer at coding addict</h2>
                   </div>
                   <img
                     src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"

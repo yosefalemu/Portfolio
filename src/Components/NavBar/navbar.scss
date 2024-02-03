@@ -1,3 +1,5 @@
+/* Updated styles for NavBar component */
+
 .navbarContainer {
   height: 80px;
   width: 100%;
@@ -10,9 +12,11 @@
   position: sticky;
   top: 0;
   z-index: 1000000;
+
   .navbarleft {
     flex: 1;
     width: 300px;
+
     .welcomeImage {
       width: 95%;
       object-fit: contain;
@@ -20,31 +24,49 @@
   }
 
   .navbarright {
-    flex: 3;
+    flex: 2;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
 
     .eachrightelement {
       display: flex;
       align-items: center;
       gap: 10px;
       cursor: pointer;
-      padding: 5px 15px;
-      border: 2px solid #fff;
       transition: 0.5s;
+      position: relative;
+
       h1 {
-        font-size: 16px;
+        font-size: 18px;
       }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 8px;
+        background-color: #00abfa;
+        border-radius: 20px;
+        bottom: -13px;
+        left: 0%;
+        transform: translateX(-50%);
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+
       &:hover {
-        border-color: #00abfa;
-        color: #00abfa;
+        &:after {
+          width: 90%;
+          left: 50%;
+        }
       }
+
       &.active {
-        border-color: #00abfa;
-        margin-bottom: 20px;
-        color: #00abfa;
-        border-radius: 3px;
+        &:after {
+          width: 90%;
+          left: 50%;
+        }
+        margin-bottom: 40px;
       }
     }
   }
