@@ -5,38 +5,74 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { RiExternalLinkFill } from "react-icons/ri";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { DiGithubFull } from "react-icons/di";
+import data from "../../utils/data/index.json";
+import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
+  const lengthOfProjects = data.projects.length;
   const [modalOpen, setModalOpen] = useState(false);
   const [index, setIndex] = useState(0);
-  const imagesList = [
-    "./images/addis.jpg",
-    "./images/alif.jpg",
-    "./images/angular.png",
-    "./images/kidame.jpg",
-  ];
-  const lengthOfImagesList = imagesList.length;
-  useEffect(() => {
-    setTimeout(() => {
-      if (index < lengthOfImagesList - 1) {
-        setIndex(index + 1);
+  const [imagesIndex, setImagesIndex] = useState(0);
+  const [projects, setProjects] = useState(data.projects[index]);
+  const lengthOfProjectImages = projects.images.length;
+
+  const handleChangeSlide = (cases) => {
+    if (cases === "left") {
+      if (index === 0) {
+        setIndex(lengthOfProjects - 1);
       } else {
-        setIndex(0);
+        setIndex(index - 1);
       }
-    }, 5000);
+    } else {
+      if (index === lengthOfProjects - 1) {
+        setIndex(0);
+      } else {
+        setIndex(index + 1);
+      }
+    }
+  };
+  useEffect(() => {
+    setProjects(data.projects[index]);
   }, [index]);
+
+  useEffect(() => {
+    if (modalOpen) {
+      setTimeout(() => {
+        if (imagesIndex < lengthOfProjectImages - 1) {
+          setImagesIndex(imagesIndex + 1);
+        } else {
+          setImagesIndex(0);
+        }
+      }, 3000);
+    }
+  }, [imagesIndex, modalOpen]);
   return (
     <div>
       <NavBar />
       <div className="projectContainer">
+        {modalOpen === true ? null : (
+          <FaChevronLeft
+            className="leftArrow"
+            size={32}
+            color="#00abfa"
+            onClick={() => handleChangeSlide("left")}
+          />
+        )}
+        {modalOpen === true ? null : (
+          <FaChevronRight
+            className="rightArrow"
+            size={32}
+            color="#00abfa"
+            onClick={() => handleChangeSlide("right")}
+          />
+        )}
         <div className="projectWrapper">
-          <FaChevronLeft className="leftArrow" size={32} color="#00abfa" />
-          <FaChevronRight className="rightArrow" size={32} color="#00abfa" />
           <h1 className="projectTitle">Projects</h1>
           <div className="wholeContainer">
             <div className="imageContainer">
               <img
-                src="./images/federal.jpg"
+                src={`${projects.mainimage}`}
                 alt=""
                 style={{
                   width: "100%",
@@ -45,41 +81,55 @@ const ProjectsPage = () => {
                   borderRadius: "15px",
                   borderBottomRightRadius: "0px",
                   borderTopRightRadius: "0px",
+                  objectFit: "contain",
                 }}
               />
             </div>
             <div className="projectContent">
-              <h1>Federal Police</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                temporibus libero molestiae ea dignissimos vel iste, rem quo
-                consequuntur modi ullam animi.
-              </p>
+              <h1>{projects.projectTitle}</h1>
+              <p>{projects.projectDescription}</p>
               <div className="buttonContainer">
-                <button
-                  className="detailButton"
-                  onClick={() => setModalOpen(true)}
-                >
-                  View Detail
-                </button>
-                <button className="githubButton">
-                  <p>Github</p>
-                  <RiExternalLinkFill size={28} color="#00abfa" />
-                </button>
+                <div className="buttonWrapper">
+                  <button
+                    className="detailButton"
+                    onClick={() => setModalOpen(true)}
+                  >
+                    View Detail
+                  </button>
+                  {projects.githublink === "private" ? (
+                    <p className="private">Private Github</p>
+                  ) : (
+                    <Link
+                      to={`${projects.githublink}`}
+                      className="githubButton"
+                    >
+                      <DiGithubFull color="#6C22A6" size={44} />
+                      <RiExternalLinkFill
+                        size={28}
+                        color="#6C22A6"
+                        className="linkIcon"
+                      />
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
         {modalOpen && (
           <div className="overlayComponent">
-            <div className="topContent" onClick={() => setModalOpen(false)}>
-              <IoIosCloseCircleOutline className="closeButton" size={28} />
+            <div className="topContent">
+              <IoIosCloseCircleOutline
+                className="closeButton"
+                size={34}
+                onClick={() => setModalOpen(false)}
+              />
             </div>
             <div className="imageContainer">
               <img
-                src={`${imagesList[index]}`}
+                src={`${projects.images[imagesIndex]}`}
                 alt=""
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                style={{ width: "100%", height: "100%", objectFit: "fill" }}
               />
             </div>
           </div>

@@ -206,5 +206,102 @@
       "rating": "85",
       "color": "linear-gradient(45deg, #ff6c37, #ff6117)"
     }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "projectTitle": "Ethiopian Ministry of Innovation and Technology Inventory Management System",
+      "projectDescription": "Revolutionize the Ethiopian Ministry of Innovation and Technology's inventory management with an advanced system. Streamlined processes will optimize resource management and elevate the ministry's operational capabilities.",
+      "githublink": "private",
+      "mainimage": "./images/mint/login.png",
+      "images": [
+        "./images/mint/accepted.png",
+        "./images/mint/allproperties.png",
+        "./images/mint/createpro.png",
+        "./images/mint/history.png",
+        "./images/mint/home.png",
+        "./images/mint/landing.png",
+        "./images/mint/login.png",
+        "./images/mint/notification.png",
+        "./images/mint/profile.png",
+        "./images/mint/rejected.png",
+        "./images/mint/request.png",
+        "./images/mint/resetpassword.png",
+        "./images/mint/storekepaccept.png",
+        "./images/mint/storekepconfirm.png",
+        "./images/mint/userorder.png"
+      ]
+    },
+    {
+      "id": 2,
+      "projectTitle": "Ethiopian Federal Police Private Security Agent Managnment System",
+      "projectDescription": "Revolutionize the Ethiopian Federal Police Private Security Agent Management System by implementing an advanced system. Streamlined processes will empower the Federal Police to effectively oversee and manage all private security agents across the country, optimizing control and enhancing national security capabilities.",
+      "githublink": "private",
+      "mainimage": "./images/federal/login.png",
+      "images": [
+        "./images/federal/addemp.png",
+        "./images/federal/agentchat.png",
+        "./images/federal/agentemp.png",
+        "./images/federal/agents.png",
+        "./images/federal/allusers.png",
+        "./images/federal/chat.png",
+        "./images/federal/chat1.png",
+        "./images/federal/employees.png",
+        "./images/federal/login.png",
+        "./images/federal/profile.png"
+      ]
+    },
+    {
+      "id": 3,
+      "projectTitle": "Music Player App For Addis Software Internship Application",
+      "projectDescription": "Transform the Music Player App for Addis Software Internship Application Program by incorporating advanced features. Streamlined processes will empower the development team to efficiently manage and enhance the application, optimizing user experience and showcasing your programming capabilities during the internship application process.",
+      "githublink": "https://github.com/yosefalemu/music-player-app-fullstack",
+      "mainimage": "./images/music/home.png",
+      "images": [
+        "./images/music/albums.png",
+        "./images/music/allalbums.png",
+        "./images/music/alltracks.png",
+        "./images/music/basicfunc.png",
+        "./images/music/home.png",
+        "./images/music/landing.png",
+        "./images/music/subfuctionality.png"
+      ]
+    },
+    {
+      "id": 4,
+      "projectTitle": "Facebook Clone, My First Full-stack Application ",
+      "projectDescription": "My inaugural full-stack project is a Facebook clone, showcasing proficiency in both front-end and back-end development. Meticulously implementing core features such as user authentication, profile creation, friend requests, posts, comments, and likes.",
+      "githublink": "https://github.com/yosefalemu/faceBookClone-fullstack",
+      "mainimage": "./images/facebook/home.png",
+      "images": [
+        "./images/facebook/basicinfo.png",
+        "./images/facebook/chat.png",
+        "./images/facebook/chat1.png",
+        "./images/facebook/chat2.png",
+        "./images/facebook/compleinfo.png",
+        "./images/facebook/friendrequest.png",
+        "./images/facebook/friends.png",
+        "./images/facebook/home.png",
+        "./images/facebook/home1.png",
+        "./images/facebook/hovered.png",
+        "./images/facebook/profile.png",
+        "./images/facebook/profile1.png",
+        "./images/facebook/signup.png"
+      ]
+    },
+    {
+      "id": 5,
+      "projectTitle": "Exploring The Dynamic Features Of Gym For Optimal Gym Operations",
+      "projectDescription": "Elevate your gym experience with a cutting-edge application designed for seamless fitness management. Track workouts, manage memberships, and foster real-time communication, enhancing overall gym operations and member satisfaction.",
+      "githublink": "https://github.com/yosefalemu/react-typescript-tailwind-gym-website",
+      "mainimage": "./images/gym/home.png",
+      "images": [
+        "./images/gym/home.png",
+        "./images/gym/benefit.png",
+        "./images/gym/benefit1.png",
+        "./images/gym/classes.png",
+        "./images/gym/contact.png"
+      ]
+    }
   ]
 }
