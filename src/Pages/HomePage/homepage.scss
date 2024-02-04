@@ -21,6 +21,60 @@
       margin: auto;
       display: flex;
       gap: 50px;
+      @media (max-width: 1200px) {
+        .homeRightTopLeft {
+          font-size: 28px !important;
+        }
+        .homeRightTopRight {
+          font-size: 28px !important;
+        }
+        .homeRightMiddleText {
+          font-size: 28px !important;
+        }
+        .homeRightFreelance {
+          font-size: 28px !important;
+        }
+      }
+      @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+        .homeLeft {
+          flex: 1;
+          height: 100% !important;
+          width: 100% !important;
+          .imagePortfolio {
+          }
+        }
+        .homeRight {
+          flex: 1;
+          width: 100%;
+          justify-content: space-between;
+          padding: 10px !important;
+          .homeRightTop {
+            .homeRightTopLeft {
+              font-size: 28px !important;
+            }
+            .homeRightTopRight {
+              font-size: 28px !important;
+            }
+          }
+          .homeRightMiddle {
+            flex-direction: column;
+            align-items: flex-start !important;
+            .homeRightFreelance {
+              font-size: 28px !important;
+            }
+            .homeRightMiddleText {
+              font-size: 28px !important;
+            }
+          }
+          .homeRightBottom {
+            flex-direction: column;
+            gap: 10px !important;
+          }
+        }
+      }
 
       .homeLeft {
         flex: 1;
@@ -83,12 +137,11 @@
 
         .homeRightBottom {
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           padding: 0 50px;
           align-items: center;
-          gap: 20px;
-          margin-top: 70px;
-
+          margin-top: 40px;
+          gap: 50px;
           .resumeDownload {
             display: flex;
             align-items: center;
@@ -110,33 +163,37 @@
               scale: 1.1;
             }
           }
+          .socialIcons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .github {
+              cursor: pointer;
+            }
 
-          .github {
-            cursor: pointer;
-          }
+            .linkedin {
+              color: #2867b2;
+              cursor: pointer;
+            }
 
-          .linkedin {
-            color: #2867b2;
-            cursor: pointer;
-          }
+            .stackOverFlow {
+              color: #f48024;
+              cursor: pointer;
+            }
 
-          .stackOverFlow {
-            color: #f48024;
-            cursor: pointer;
-          }
+            .instagram {
+              cursor: pointer;
+            }
 
-          .instagram {
-            cursor: pointer;
-          }
+            .twitter {
+              color: #fff;
+              cursor: pointer;
+            }
 
-          .twitter {
-            color: #fff;
-            cursor: pointer;
-          }
-
-          .telegram {
-            color: #0088cc;
-            cursor: pointer;
+            .telegram {
+              color: #0088cc;
+              cursor: pointer;
+            }
           }
         }
       }

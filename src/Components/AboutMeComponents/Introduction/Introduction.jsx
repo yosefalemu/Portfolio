@@ -19,23 +19,13 @@ const Introduction = () => {
       <div className="introductionWrapper">
         {introduction.map((item, index) => (
           <React.Fragment key={index}>
-            <motion.div
-              className="glass-container"
-              variants={
-                index % 2 === 0
-                  ? glassContainerVariantsForEven
-                  : glassContainerVariantsForOdd
-              }
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1, delay: index * 0.5 }}
-            >
+            <div className="glass-container">
               <div className="glass-content">
                 <div className="title">{item.title}</div>
                 <div className="subTitle">{item.subTitle}</div>
                 <div className="text">{item.text}</div>
               </div>
-            </motion.div>
+            </div>
             {index % 2 === 0 && (
               <RxDoubleArrowRight
                 className="arrowIcon"

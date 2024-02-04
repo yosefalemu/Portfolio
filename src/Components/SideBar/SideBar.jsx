@@ -1,8 +1,8 @@
-import Links from "./Links/Links";
+import React, { useState } from "react";
 import ToggleButton from "./ToggleButton/ToggleButton";
+import Links from "./Links/Links";
 import { motion } from "framer-motion";
 import "./sidebar.scss";
-import { useState } from "react";
 
 const SideBar = () => {
   const variants = {
@@ -14,7 +14,7 @@ const SideBar = () => {
       },
     },
     closed: {
-      clipPath: "circle(30px at 50px 50px)",
+      clipPath: "circle(30px at 250vw 50px)",
       transition: {
         delay: 0.5,
         type: "spring",
@@ -24,9 +24,9 @@ const SideBar = () => {
     },
   };
   const [open, setOpen] = useState(false);
-  console.log(open);
+
   return (
-    <motion.div className="sideBar" animate={open ? "open" : "closed"}>
+    <motion.div className="sides" animate={open ? "open" : "closed"}>
       <motion.div className="bg" variants={variants}>
         <Links />
       </motion.div>

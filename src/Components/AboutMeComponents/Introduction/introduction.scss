@@ -1,13 +1,31 @@
 .introductionContainer {
-  padding: 0px 100px;
+  padding: 50px 100px;
+  @media (max-width: 1200px) {
+    padding: 30px !important;
+    .glass-container {
+      width: 46% !important;
+    }
+  }
   .introductionWrapper {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 37px;
+    @media (max-width: 760px) {
+      flex-direction: column;
+      .glass-container {
+        width: 100% !important;
+      }
+      .arrowIcon {
+        display: none;
+      }
+    }
+    @media (max-width: 1300px) {
+      gap: 10px;
+    }
     .glass-container {
       width: 45%;
-      height: 290px;
+      height: fit-content;
       border-radius: 5px;
       padding: 30px 10px;
       background: rgba(0, 171, 250, 0.217);

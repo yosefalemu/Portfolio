@@ -116,30 +116,32 @@ const HomePage = () => {
               <span className="homeRightMiddleText" ref={textRef}></span>
             </div>
             <div className="homeRightBottom">
-              <button className="resumeDownload">
+              <div className="resumeDownload">
                 <h1>RESUME</h1>
                 <MdOutlineCloudDownload size={32} />
-              </button>
-              <div className="github">
-                <FiGithub size={32} color="#fff" />
               </div>
-              <div className="linkedin">
-                <FaLinkedinIn size={32} />
-              </div>
-              <div className="stackOverFlow">
-                <FaStackOverflow size={32} />
-              </div>
-              <div className="instagram">
-                <FaInstagram
-                  size={32}
-                  style={{ fill: "url(#instagram-gradient)" }}
-                />
-              </div>
-              <div className="twitter">
-                <BsTwitterX size={32} />
-              </div>
-              <div className="telegram">
-                <FaTelegramPlane size={32} />
+              <div className="socialIcons">
+                <div className="github">
+                  <FiGithub size={32} color="#fff" />
+                </div>
+                <div className="linkedin">
+                  <FaLinkedinIn size={32} />
+                </div>
+                <div className="stackOverFlow">
+                  <FaStackOverflow size={32} />
+                </div>
+                <div className="instagram">
+                  <FaInstagram
+                    size={32}
+                    style={{ fill: "url(#instagram-gradient)" }}
+                  />
+                </div>
+                <div className="twitter">
+                  <BsTwitterX size={32} />
+                </div>
+                <div className="telegram">
+                  <FaTelegramPlane size={32} />
+                </div>
               </div>
             </div>
           </div>

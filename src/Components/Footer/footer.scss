@@ -34,6 +34,10 @@
     background: #051824;
     display: flex;
     align-items: center;
+    @media (max-width: 760px) {
+      flex-direction: column;
+      gap: 10px;
+    }
     .gretting {
       flex: 1;
     }
