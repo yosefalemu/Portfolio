@@ -1,11 +1,11 @@
 import React from "react";
 import "./navbar.scss";
-import { IoHome } from "react-icons/io5";
-import { PiPersonArmsSpreadFill } from "react-icons/pi";
-import { GiSkills } from "react-icons/gi";
-import { GrProjects } from "react-icons/gr";
-import { TiGroup } from "react-icons/ti";
-import { BiSolidContact } from "react-icons/bi";
+import { IoHomeOutline } from "react-icons/io5";
+import { GoPerson } from "react-icons/go";
+import { SiTalenthouse } from "react-icons/si";
+import { MdOutlineAssignment } from "react-icons/md";
+import { RiGroupLine } from "react-icons/ri";
+import { MdOutlineContactPage } from "react-icons/md";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
@@ -30,28 +30,28 @@ const NavBar = () => {
           className={`eachrightelement ${isActive("") ? "active" : ""}`}
           onClick={() => navigate("/")}
         >
-          <IoHome size={22} />
+          <IoHomeOutline size={22} />
           <h1>Home</h1>
         </div>
         <div
           className={`eachrightelement ${isActive("aboutme") ? "active" : ""}`}
           onClick={() => navigate("/aboutme")}
         >
-          <PiPersonArmsSpreadFill size={22} />
+          <GoPerson size={22} />
           <h1>AboutMe</h1>
         </div>
         <div
           className={`eachrightelement ${isActive("skills") ? "active" : ""}`}
           onClick={() => navigate("/skills")}
         >
-          <GiSkills size={22} />
+          <SiTalenthouse size={22} />
           <h1>Skills</h1>
         </div>
         <div
           className={`eachrightelement ${isActive("projects") ? "active" : ""}`}
           onClick={() => navigate("/projects")}
         >
-          <GrProjects size={22} />
+          <MdOutlineAssignment size={22} />
           <h1>Projects</h1>
         </div>
         <div
@@ -60,7 +60,7 @@ const NavBar = () => {
           }`}
           onClick={() => navigate("/testimonials")}
         >
-          <TiGroup size={22} />
+          <RiGroupLine size={22} />
           <h1>Testimonials</h1>
         </div>
         <div
@@ -69,7 +69,7 @@ const NavBar = () => {
           }`}
           onClick={() => navigate("/contactme")}
         >
-          <BiSolidContact size={22} />
+          <MdOutlineContactPage size={22} />
           <h1>ContactMe</h1>
         </div>
       </div>

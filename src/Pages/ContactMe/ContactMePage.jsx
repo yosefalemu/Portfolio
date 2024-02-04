@@ -4,7 +4,7 @@ import NavBar from "../../Components/NavBar/NavBar";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaSquareFacebook } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -37,19 +37,19 @@ const ContactMePage = () => {
           </div>
           <div className="contactMiddle">
             <div className="socialIcons">
-              <FaSquareFacebook
+              <FaFacebookF
                 size={32}
                 color="#1877F2"
                 style={{ cursor: "pointer" }}
               />
               <BsInstagram
                 size={32}
-                color="#BC2A8D"
+                color="orange"
                 style={{ cursor: "pointer" }}
               />
               <BsTwitterX
                 size={32}
-                color="black"
+                color="#fff"
                 style={{ cursor: "pointer" }}
               />
               <FaLinkedinIn

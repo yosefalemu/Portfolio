@@ -77,25 +77,14 @@ const AboutMePage = () => {
               {/* <MdOutlineSportsKabaddi size={28} /> */}
               <h1>Hobbies</h1>
             </div>
-            <div
-              className={`eachTopElement ${
-                activeElement === "FutureInfo" ? "active" : ""
-              }`}
-              onClick={() => setActiveElement("FutureInfo")}
-            >
-              {/* <SiFuturelearn size={28} /> */}
-              <h1>Future Info</h1>
-            </div>
           </div>
           <div className="aboutMeBottom">
             {activeElement === "Introduction" ? (
               <Introduction />
             ) : activeElement === "Experiences" ? (
               <Experiences />
-            ) : activeElement === "Hobbies" ? (
-              <Hobbies />
             ) : (
-              <Future />
+              <Hobbies />
             )}
           </div>
           <Footer setActiveElement={setActiveElement} />

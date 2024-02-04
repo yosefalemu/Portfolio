@@ -39,7 +39,7 @@ const TestimonialsPage = () => {
               style={{
                 "--swiper-navigation-color": "#00abfa",
                 "--swiper-navigation-size": "18px",
-                "--swiper-pagination-color": "#6C22A6",
+                "--swiper-pagination-color": "#00abfa",
               }}
               modules={[EffectCoverflow, Pagination, Navigation]}
               className="swiper_container"

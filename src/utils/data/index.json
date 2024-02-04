@@ -303,5 +303,39 @@
         "./images/gym/contact.png"
       ]
     }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Wollo University summer STEM program",
+      "from": "2015",
+      "to": "2019",
+      "content": "Studying at Wollo University for a four-year STEM program was transformative, providing me with advanced knowledge in Science, Technology, English, and Mathematics. During my time there, I actively engaged in experiments, contributing to a hands-on learning experience and furthering my understanding of these crucial subjects.",
+      "image": "./images/experiences/wollo.png"
+    },
+    {
+      "id": 2,
+      "title": "Addis Ababa University",
+      "from": "2019",
+      "to": "2024",
+      "content": "My experience at Addis Ababa University, where I pursued Electrical and Computer Engineering with a specialization in Computer Science, was immensely enriching. The university provided a platform for in-depth exploration of these fields, offering advanced coursework and practical applications. Engaging in specialized studies allowed me to deepen my understanding and gain expertise in the intersection of electrical engineering and computer science.",
+      "image": "./images/experiences/addis.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Ethiopian Innovation and Technology Ministry",
+      "from": "October 2023",
+      "to": "Feburary 2024",
+      "content": "My experience at the Ethiopian Ministry of Innovation and Technology was marked by significant contributions, particularly in the development of a fully functional inventory system. The system, which I built, is currently in active use. This hands-on project not only showcased my technical skills but also allowed me to make a tangible impact within the ministry.",
+      "image": "./images/experiences/mint.png"
+    },
+    {
+      "id": 4,
+      "title": "Ethiopian Federal Police",
+      "from": "October 2023",
+      "to": "current",
+      "content": "My current role at the Ethiopian Federal Police has been particularly impactful as I contribute to the development and implementation of a Private Security Agent Management System. This project involves creating a comprehensive and efficient system to manage private security personnel. Working with the Ethiopian Federal Police allows me to leverage my skills in technology to enhance security operations and streamline management processes.",
+      "image": "./images/experiences/federal.png"
+    }
   ]
 }

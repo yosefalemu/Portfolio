@@ -1,6 +1,5 @@
 .homepagecontainer {
   width: 100%;
-
   .homePageWrapper {
     position: relative;
     height: calc(100vh - 80px);
@@ -161,7 +160,6 @@
       opacity: 0.1;
       padding: 50px;
       z-index: 1;
-
       svg {
         linearGradient {
           stop:nth-child(1) {
