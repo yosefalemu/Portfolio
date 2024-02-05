@@ -55,6 +55,35 @@
       align-items: center;
       justify-content: center;
       gap: 15px;
+      .github {
+        cursor: pointer;
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .linkedin {
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: #2867b2;
+        }
+      }
+
+      .stackOverFlow {
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: #f48024;
+        }
+      }
+      .telegram {
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: #0088cc;
+        }
+      }
     }
   }
 }

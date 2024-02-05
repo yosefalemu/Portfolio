@@ -5,6 +5,8 @@ import { GoPerson } from "react-icons/go";
 import { BsPersonCheck } from "react-icons/bs";
 import { MdOutlineSportsKabaddi } from "react-icons/md";
 import { MdDensitySmall } from "react-icons/md";
+import { FaStackOverflow } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
@@ -16,6 +18,7 @@ import { FiGithub } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
+import { PiTelegramLogo } from "react-icons/pi";
 
 const Footer = ({ setActiveElement }) => {
   const location = useLocation();
@@ -148,18 +151,42 @@ const Footer = ({ setActiveElement }) => {
         <p className="gretting"></p>
         <p className="dateTime">{`Copyright © ${new Date().getFullYear()} Yosef Alemu`}</p>
         <div className="socialIcons">
-          <FiGithub size={32} style={{ cursor: "pointer" }} />
-          <FaXTwitter size={32} style={{ cursor: "pointer" }} />
-          <FaLinkedinIn
-            size={32}
-            color="#0088cc"
-            style={{ cursor: "pointer" }}
-          />
-          <IoLogoInstagram
-            size={32}
-            color="orange"
-            style={{ cursor: "pointer" }}
-          />
+          <div className="github">
+            <a
+              href="https://github.com/yosefalemu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiGithub size={32} color="#fff" />
+            </a>
+          </div>
+          <div className="linkedin">
+            <a
+              href="https://www.linkedin.com/in/yosef-alemu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn size={32} />
+            </a>
+          </div>
+          <div className="stackOverFlow">
+            <a
+              href="https://stackoverflow.com/users/22899543/yosef-alemu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaStackOverflow size={32} />
+            </a>
+          </div>
+          <div className="telegram">
+            <a
+              href="https://t.me/Yosef2323"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTelegramPlane size={32} />
+            </a>
+          </div>
         </div>
       </div>
     </div>

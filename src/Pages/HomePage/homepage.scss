@@ -167,32 +167,35 @@
             display: flex;
             align-items: center;
             gap: 20px;
+
             .github {
               cursor: pointer;
+              a {
+                text-decoration: none;
+              }
             }
 
             .linkedin {
-              color: #2867b2;
               cursor: pointer;
+              a {
+                text-decoration: none;
+                color: #2867b2;
+              }
             }
 
             .stackOverFlow {
-              color: #f48024;
               cursor: pointer;
+              a {
+                text-decoration: none;
+                color: #f48024;
+              }
             }
-
-            .instagram {
-              cursor: pointer;
-            }
-
-            .twitter {
-              color: #fff;
-              cursor: pointer;
-            }
-
             .telegram {
-              color: #0088cc;
               cursor: pointer;
+              a {
+                text-decoration: none;
+                color: #0088cc;
+              }
             }
           }
         }
@@ -224,6 +227,44 @@
           }
           stop:nth-child(2) {
             stop-color: #ff5b77;
+          }
+        }
+      }
+    }
+    .resumeContainer {
+      z-index: 1000000000000000;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .resumeWrapper {
+        width: fit-content;
+        height: 80%;
+        margin-top: 80px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          width: 0px;
+        }
+        .resumeTop {
+          height: 40px;
+          width: 100%;
+          position: sticky;
+          top: 0;
+          padding: 0px 25px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 20px;
+          background: #051824;
+          z-index: 100000000000000;
+          a {
+            text-decoration: none;
           }
         }
       }

@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   @media (max-width: 1200px) {
     height: fit-content;
     padding: 50px !important;
@@ -97,6 +98,35 @@
           flex-direction: row;
           justify-content: center !important;
         }
+        .github {
+          cursor: pointer;
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .linkedin {
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: #2867b2;
+          }
+        }
+
+        .stackOverFlow {
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: #f48024;
+          }
+        }
+        .telegram {
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: #0088cc;
+          }
+        }
       }
     }
 
@@ -133,42 +163,47 @@
           @media (max-width: 1200px) {
             margin-top: 5px;
           }
-          input,
-          textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #00abfa;
-            border-radius: 5px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 14px;
-            outline: none;
-            transition: border-color 0.3s ease;
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+            padding: 10px 20px;
+            input,
+            textarea {
+              width: 100%;
+              padding: 15px;
+              border: 1px solid #00abfa;
+              border-radius: 5px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-size: 14px;
+              outline: none;
+              transition: border-color 0.3s ease;
 
-            &:focus {
-              border-color: #1877f2;
+              &:focus {
+                border-color: #1877f2;
+              }
+              @media (max-width: 1200px) {
+                padding: 10px;
+              }
             }
-            @media (max-width: 1200px) {
-              padding: 10px;
+            .submitButton {
+              padding: 10px 20px;
+              background-color: #00abfa;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-size: 16px;
+              transition: background-color 0.3s ease;
+              &:hover {
+                background-color: #1877f2;
+              }
+              @media (max-width: 1200px) {
+                padding: 5px 20px;
+              }
             }
-          }
-        }
-
-        .submitButton {
-          flex: 1;
-          padding: 10px 20px;
-          background-color: #00abfa;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          font-size: 16px;
-          transition: background-color 0.3s ease;
-          &:hover {
-            background-color: #1877f2;
-          }
-          @media (max-width: 1200px) {
-            padding: 5px 20px;
           }
         }
       }

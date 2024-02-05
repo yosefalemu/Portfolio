@@ -1,15 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./contactme.scss";
 import NavBar from "../../Components/NavBar/NavBar";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
+import { FaStackOverflow } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const ContactMePage = () => {
+  const form = useRef();
+  const [data, setData] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setData(false);
+    }, 4000);
+  }, [data]);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    emailjs
+      .sendForm(
+        "service_pehbd2j",
+        "template_bw1305l",
+        form.current,
+        "jtAH0qGX8EyfV-cro"
+      )
+      .then(
+        (result) => {
+          toast.success("message sent");
+          console.log(result.text);
+          console.log("message sent");
+          setData(true);
+        },
+        (error) => {
+          toast.error(error.text);
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div>
       <NavBar />
@@ -37,46 +71,84 @@ const ContactMePage = () => {
           </div>
           <div className="contactMiddle">
             <div className="socialIcons">
-              <FaFacebookF
-                size={32}
-                color="#1877F2"
-                style={{ cursor: "pointer" }}
-              />
-              <BsInstagram
-                size={32}
-                color="orange"
-                style={{ cursor: "pointer" }}
-              />
-              <BsTwitterX
-                size={32}
-                color="#fff"
-                style={{ cursor: "pointer" }}
-              />
-              <FaLinkedinIn
-                size={32}
-                color="#0077B5"
-                style={{ cursor: "pointer" }}
-              />
+              <div className="github">
+                <a
+                  href="https://github.com/yosefalemu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FiGithub size={32} color="#fff" />
+                </a>
+              </div>
+              <div className="linkedin">
+                <a
+                  href="https://www.linkedin.com/in/yosef-alemu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedinIn size={32} />
+                </a>
+              </div>
+              <div className="stackOverFlow">
+                <a
+                  href="https://stackoverflow.com/users/22899543/yosef-alemu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaStackOverflow size={32} />
+                </a>
+              </div>
+              <div className="telegram">
+                <a
+                  href="https://t.me/Yosef2323"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTelegramPlane size={32} />
+                </a>
+              </div>
             </div>
           </div>
           <div className="contactRight">
             <div className="rightWrapper">
               <h1>Get in Touch</h1>
               <div className="inputContainer">
-                <input type="text" placeholder="Your name" />
-                <input type="text" placeholder="Your email" />
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="7"
-                  placeholder="Enter your message"
-                ></textarea>
+                <form ref={form} onSubmit={sendEmail}>
+                  <input type="text" placeholder="Your name" name="user_name" />
+                  <input
+                    type="text"
+                    placeholder="Your email"
+                    name="user_email"
+                  />
+                  <textarea
+                    name="message"
+                    cols="30"
+                    rows="7"
+                    placeholder="Enter your message"
+                  />
+                  <input type="submit" value="Send" className="submitButton" />
+                </form>
               </div>
-              <div className="submitButton">Submit</div>
             </div>
           </div>
         </div>
+        {data && (
+          <div
+            style={{
+              position: "absolute",
+              top: "5px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              color: "white",
+              background: "green",
+              padding: "5px 15px",
+              borderRadius: "10px",
+              fontSize: "24px",
+            }}
+          >
+            Message sent
+          </div>
+        )}
       </div>
     </div>
   );

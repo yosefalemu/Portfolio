@@ -1,20 +1,33 @@
 import NavBar from "../../Components/NavBar/NavBar";
 import "./homepage.scss";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdOutlineCloudDownload } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaStackOverflow } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaHandsClapping } from "react-icons/fa6";
-import { motion, useAnimation } from "framer-motion";
+import { GiCloudDownload } from "react-icons/gi";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { motion } from "framer-motion";
+import { pdfjs } from "react-pdf";
+import { Document, Page } from "react-pdf";
 import { init } from "ityped";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
+).toString();
 
 const HomePage = () => {
   const textRef = useRef();
+  const [resumeModal, setResumeModal] = useState(false);
+  const [numPages, setNumPages] = useState();
+  const [pageNumber, setPageNumber] = useState(1);
 
+  function onDocumentLoadSuccess() {
+    setNumPages(numPages?._pdfInfo?.numPages);
+  }
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
@@ -116,31 +129,49 @@ const HomePage = () => {
               <span className="homeRightMiddleText" ref={textRef}></span>
             </div>
             <div className="homeRightBottom">
-              <div className="resumeDownload">
+              <div
+                className="resumeDownload"
+                onClick={() => setResumeModal(true)}
+              >
                 <h1>RESUME</h1>
                 <MdOutlineCloudDownload size={32} />
               </div>
               <div className="socialIcons">
                 <div className="github">
-                  <FiGithub size={32} color="#fff" />
+                  <a
+                    href="https://github.com/yosefalemu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub size={32} color="#fff" />
+                  </a>
                 </div>
                 <div className="linkedin">
-                  <FaLinkedinIn size={32} />
+                  <a
+                    href="https://www.linkedin.com/in/yosef-alemu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedinIn size={32} />
+                  </a>
                 </div>
                 <div className="stackOverFlow">
-                  <FaStackOverflow size={32} />
-                </div>
-                <div className="instagram">
-                  <FaInstagram
-                    size={32}
-                    style={{ fill: "url(#instagram-gradient)" }}
-                  />
-                </div>
-                <div className="twitter">
-                  <BsTwitterX size={32} />
+                  <a
+                    href="https://stackoverflow.com/users/22899543/yosef-alemu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaStackOverflow size={32} />
+                  </a>
                 </div>
                 <div className="telegram">
-                  <FaTelegramPlane size={32} />
+                  <a
+                    href="https://t.me/Yosef2323"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaTelegramPlane size={32} />
+                  </a>
                 </div>
               </div>
             </div>
@@ -160,6 +191,36 @@ const HomePage = () => {
             </linearGradient>
           </svg>
         </div>
+        {resumeModal && (
+          <div className="resumeContainer">
+            <div className="resumeWrapper">
+              <div className="resumeTop" onClick={() => setResumeModal(false)}>
+                <a href="./files/resume.pdf" download="resume.pdf">
+                  <GiCloudDownload
+                    size={28}
+                    style={{ cursor: "pointer" }}
+                    color="#2867b2"
+                  />
+                </a>
+                <IoIosCloseCircleOutline
+                  size={32}
+                  style={{ cursor: "pointer" }}
+                  color="red"
+                />
+              </div>
+              <Document
+                file="./files/resume.pdf"
+                onLoadSuccess={onDocumentLoadSuccess}
+              >
+                <Page
+                  pageNumber={pageNumber}
+                  renderTextLayer={false}
+                  renderAnnotationLayer={false}
+                />
+              </Document>
+            </div>
+          </div>
+        )}
       </div>
     </motion.div>
   );

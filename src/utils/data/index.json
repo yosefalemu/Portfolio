@@ -205,6 +205,22 @@
       "category": "tools",
       "rating": "85",
       "color": "linear-gradient(45deg, #ff6c37, #ff6117)"
+    },
+    {
+      "image": "./images/vscode.png",
+      "title": "Visual Studio Code",
+      "text": "Free and open-source code editor developed by Microsoft.",
+      "category": "tools",
+      "rating": "90",
+      "color": "linear-gradient(45deg, #007acc, #004e8a)"
+    },
+    {
+      "image": "./images/linux.png",
+      "title": "Linux",
+      "text": "Open-source Unix-like operating system kernel.Linux is widely used for its stability, security, and versatility.",
+      "category": "tools",
+      "rating": "95",
+      "color": "linear-gradient(45deg, #f5f5f5, #d1d1d1)"
     }
   ],
   "projects": [
