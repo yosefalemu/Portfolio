@@ -4,7 +4,7 @@ import Links from "./Links/Links";
 import { motion } from "framer-motion";
 import "./sidebar.scss";
 
-const SideBar = () => {
+const Sidebar = () => {
   const variants = {
     open: {
       clipPath: "circle(1600px at 50px 50px)",
@@ -35,4 +35,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Sidebar;
