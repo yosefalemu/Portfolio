@@ -42,33 +42,7 @@ const SkillsPage = () => {
       (document.documentElement.scrollHeight - window.innerHeight)) *
     100
   }%`;
-  const cardVariants = {
-    initial: {
-      opacity: 0,
-      x: -500,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 2,
-      },
-    },
-  };
 
-  const cardVariantsRight = {
-    initial: {
-      opacity: 0,
-      x: 800,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 3,
-      },
-    },
-  };
   return (
     <div>
       <NavBar />

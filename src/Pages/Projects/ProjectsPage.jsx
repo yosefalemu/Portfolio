@@ -90,12 +90,12 @@ const ProjectsPage = () => {
               <p>{projects.projectDescription}</p>
               <div className="buttonContainer">
                 <div className="buttonWrapper">
-                  <button
+                  <div
                     className="detailButton"
                     onClick={() => setModalOpen(true)}
                   >
                     Preview
-                  </button>
+                  </div>
                   {projects.githublink === "private" ? (
                     <p className="private">Private Github</p>
                   ) : (
@@ -103,10 +103,10 @@ const ProjectsPage = () => {
                       to={`${projects.githublink}`}
                       className="githubButton"
                     >
-                      <DiGithubFull color="#6C22A6" size={44} />
+                      <DiGithubFull color="#00abfa" size={28} />
                       <RiExternalLinkFill
                         size={28}
-                        color="#6C22A6"
+                        color="#00abfa"
                         className="linkIcon"
                       />
                     </Link>

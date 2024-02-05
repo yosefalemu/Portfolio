@@ -73,7 +73,7 @@ const ContactMePage = () => {
                   placeholder="Enter your message"
                 ></textarea>
               </div>
-              <button>Submit</button>
+              <div className="submitButton">Submit</div>
             </div>
           </div>
         </div>

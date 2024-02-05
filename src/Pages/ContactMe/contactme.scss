@@ -4,6 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1200px) {
+    height: fit-content;
+    padding: 50px !important;
+  }
+  @media (max-width: 850px) {
+    height: fit-content;
+    padding: 10px !important;
+  }
 
   .contactWrapper {
     width: 80%;
@@ -22,7 +30,13 @@
     -webkit-backdrop-filter: blur(50px);
     box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.18);
-
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+    @media (max-width: 850px) {
+      width: 90%;
+      height: fit-content;
+    }
     .contactLeft {
       flex: 1;
       height: 100%;
@@ -31,6 +45,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
+      @media (max-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @media (max-width: 850px) {
+        flex-direction: column !important;
+        gap: 15px;
+      }
 
       .eachLeftItem {
         display: flex;
@@ -62,11 +85,18 @@
       justify-content: center;
       align-items: center;
       height: 100%;
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
       .socialIcons {
         display: flex;
         flex-direction: column;
         gap: 15px;
         height: fit-content;
+        @media (max-width: 1200px) {
+          flex-direction: row;
+          justify-content: center !important;
+        }
       }
     }
 
@@ -74,6 +104,10 @@
       flex: 2;
       height: 100%;
       padding: 10px 30px;
+      @media (max-width: 1200px) {
+        width: 100%;
+        padding: 0px 30pxF;
+      }
       .rightWrapper {
         display: flex;
         align-items: flex-start;
@@ -81,6 +115,9 @@
         justify-content: space-around;
         height: 100%;
         gap: 10px;
+        @media (max-width: 1200px) {
+          gap: 2px;
+        }
         h1 {
           color: #00abfa;
           flex: 1;
@@ -93,6 +130,9 @@
           display: flex;
           flex-direction: column;
           gap: 15px;
+          @media (max-width: 1200px) {
+            margin-top: 5px;
+          }
           input,
           textarea {
             width: 100%;
@@ -107,10 +147,13 @@
             &:focus {
               border-color: #1877f2;
             }
+            @media (max-width: 1200px) {
+              padding: 10px;
+            }
           }
         }
 
-        button {
+        .submitButton {
           flex: 1;
           padding: 10px 20px;
           background-color: #00abfa;
@@ -123,6 +166,9 @@
           transition: background-color 0.3s ease;
           &:hover {
             background-color: #1877f2;
+          }
+          @media (max-width: 1200px) {
+            padding: 5px 20px;
           }
         }
       }

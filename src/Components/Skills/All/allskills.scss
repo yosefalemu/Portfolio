@@ -1,10 +1,16 @@
 .allSkillContainer {
   padding: 0px 100px;
+  @media (max-width: 1000px) {
+    padding: 10px !important;
+  }
   .allSkillWrapper {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 42px;
+    @media (max-width: 800px) {
+      flex-direction: column !important;
+    }
     .glass-container {
       width: 48%;
       border-radius: 5px;
@@ -20,6 +26,12 @@
       box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.18);
       position: relative;
+      @media (max-width: 1260px) {
+        width: 47% !important;
+      }
+      @media (max-width: 1000px) {
+        width: 100% !important;
+      }
       .glass-content {
         height: 100%;
         display: flex;
@@ -28,6 +40,9 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 18px;
         transition: 0.3s;
+        @media (max-width: 1000px) {
+          flex-direction: column;
+        }
         .imageContainer {
           flex: 1;
         }

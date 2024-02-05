@@ -1,6 +1,7 @@
 .testimonialContainer {
   height: calc(100vh - 80px);
   width: 100%;
+
   h1 {
     font-size: 62px;
     text-align: center;
@@ -9,18 +10,22 @@
     font-weight: 700;
     height: 10%;
   }
+
   .testimonialWrapper {
     height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
+
     .wholeContainer {
       width: 90%;
       height: 90%;
+
       .swiper_container {
         height: 100%;
         padding: 2rem 0;
         position: relative;
+
         .swiper-slide {
           width: 50%;
           height: 90%;
@@ -37,10 +42,28 @@
           box-shadow: 0 1px 1px 0 rgba(0, 171, 250, 0.3);
           border: 1px solid rgba(255, 255, 255, 0.18);
           position: relative;
+
+          @media (max-width: 990px) {
+            width: 70%;
+          }
+
+          @media (max-width: 600px) {
+            width: 80%;
+          }
+
+          @media (max-width: 550px) {
+            width: 95%;
+          }
+
+          @media (max-width: 450px) {
+            width: 100%;
+          }
+
           .eachItemContainer {
             width: 100%;
             height: 100%;
             border-radius: 16px;
+
             .eachItemWrapper {
               position: absolute;
               width: 100%;
@@ -49,19 +72,30 @@
               display: flex;
               flex-direction: column;
               align-items: center;
+
               h1 {
                 margin-top: 75px;
                 font-size: 24px;
                 color: #fff;
                 flex: 1;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                @media (max-width: 450px) {
+                  font-size: 22px;
+                }
               }
+
               h3 {
                 color: #ffffffb6;
                 font-size: 24px;
                 flex: 1;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                @media (max-width: 450px) {
+                  font-size: 22px;
+                }
               }
+
               p {
                 color: #fff;
                 padding: 15px;
@@ -69,7 +103,11 @@
                 text-align: center;
                 font-size: 16px;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+                @media (max-width: 1200px) {
+                  font-size: 14px;
+                }
               }
+
               h2 {
                 color: #fff;
                 padding: 15px;
@@ -77,8 +115,12 @@
                 text-align: center;
                 font-size: 24px;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+                @media (max-width: 1200px) {
+                  font-size: 14px;
+                }
               }
             }
+
             img {
               position: absolute;
               width: 150px;
@@ -91,36 +133,44 @@
             }
           }
         }
+
         .slider-controler {
           height: 10%;
           position: relative;
           bottom: 2rem;
           display: flex;
           align-items: center;
-          justify-content: center;
-          .swiper-button-prev {
-            position: absolute;
-            left: 42% !important;
-            transform: translateX(-30%) !important;
-            width: 30px;
-            height: 30px;
-            border: 1px solid #00abfa;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .swiper-button-next {
-            position: absolute;
-            left: 58% !important;
-            transform: translateX(-58%) !important;
-            width: 30px;
-            height: 30px;
-            border: 1px solid #00abfa;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          justify-content: space-between;
+          .sliderWrapper {
+            .swiper-button-prev {
+              position: absolute;
+              left: 20px;
+              width: 30px;
+              height: 30px;
+              border: 1px solid #00abfa;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .swiper-pagination {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            .swiper-button-next {
+              position: absolute;
+              right: 20px;
+              width: 30px;
+              height: 30px;
+              border: 1px solid #00abfa;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
       }

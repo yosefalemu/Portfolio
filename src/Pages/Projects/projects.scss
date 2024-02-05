@@ -9,15 +9,21 @@
     left: 30px;
     top: 50%;
     cursor: pointer;
+    @media (max-width: 600px) {
+      left: 5px;
+    }
   }
   .rightArrow {
     position: absolute;
     right: 30px;
     top: 50%;
     cursor: pointer;
+    @media (max-width: 600px) {
+      right: 5px;
+    }
   }
   .projectWrapper {
-    width: 80%;
+    width: 100%;
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -30,7 +36,7 @@
       font-weight: 700;
     }
     .wholeContainer {
-      width: 100%;
+      width: 80%;
       height: 80%;
       margin: auto;
       display: flex;
@@ -79,17 +85,35 @@
         flex-direction: column;
         padding: 15px 30px;
         gap: 30px;
+        @media (max-width: 700px) {
+          padding: 5px 10px;
+          gap: 10px;
+          width: 80%;
+          left: 15%;
+        }
         h1 {
           font-size: 32px;
           color: #fff;
           flex: 1;
           text-align: center;
+          @media (max-width: 1200px) {
+            font-size: 24px;
+          }
+          @media (max-width: 700px) {
+            font-size: 18px;
+          }
         }
         p {
           font-size: 24px;
           color: #fff;
           text-align: left;
           flex: 3;
+          @media (max-width: 1200px) {
+            font-size: 18px;
+          }
+          @media (max-width: 700px) {
+            font-size: 16px;
+          }
         }
         .buttonContainer {
           flex: 1;
@@ -103,6 +127,10 @@
             justify-content: center;
             gap: 15px;
             width: 70%;
+            @media (max-width: 500px) {
+              width: 90%;
+              gap: 5px;
+            }
             .detailButton {
               flex: 1;
               font-size: 18px;
@@ -112,6 +140,9 @@
               border-radius: 15px;
               padding: 10px 15px;
               border: 2px solid #00abfa;
+              @media (max-width: 500px) {
+                padding: 5px;
+              }
             }
             .private {
               flex: 1;
@@ -125,6 +156,22 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              @media (max-width: 800px) {
+                padding: 10px 5px;
+                font-size: 16px;
+              }
+              @media (max-width: 620px) {
+                padding: 10px 5px;
+                font-size: 14px;
+              }
+              @media (max-width: 550px) {
+                padding: 15px 5px;
+                font-size: 12px;
+              }
+              @media (max-width: 500px) {
+                padding: 10px 5px;
+                font-size: 12px;
+              }
             }
             .githubButton {
               flex: 0.3;
@@ -132,15 +179,17 @@
               align-items: center;
               justify-content: space-between;
               background: transparent;
-              border: 2px solid #6c22a6;
+              border: 2px solid #00abfa;
               cursor: pointer;
               border-radius: 15px;
-              padding: 0px 15px;
+              padding: 8px 15px;
+              @media (max-width: 500px) {
+                padding: 3px 5px;
+              }
               p {
                 font-size: 18px;
                 border-radius: 5px;
-                padding: 5px 15px;
-                color: #6c22a6;
+                color: #00abfa;
               }
             }
           }
@@ -163,6 +212,10 @@
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
     border-radius: 10px;
     padding: 20px 40px 40px;
+    @media (max-width: 700px) {
+      width: 95%;
+      padding: 3px;
+    }
     .topContent {
       display: flex;
       justify-content: flex-end;
@@ -175,6 +228,14 @@
       width: 95%;
       height: 90%;
       margin: auto;
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+      img {
+        @media (max-width: 700px) {
+          object-fit: cover !important;
+        }
+      }
     }
   }
 }
