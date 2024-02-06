@@ -7,10 +7,10 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
+import data from "../../utils/data/index.json";
 
 const TestimonialsPage = () => {
+  const testimonials = data.testimonials;
   return (
     <div>
       <NavBar />
@@ -44,106 +44,19 @@ const TestimonialsPage = () => {
               modules={[EffectCoverflow, Pagination, Navigation]}
               className="swiper_container"
             >
-              <SwiperSlide>
-                <div className="eachItemContainer">
-                  <div className="eachItemWrapper">
-                    <h1 className="testimonialName">John smilga</h1>
-                    <h3>Coding Addict</h3>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Aperiam rerum architecto cumque. Pariatur maxime velit
-                      quod recusandae libero est.dolor sit amet consectetur
-                      adipisicing elit. Aperiam rerum architecto cumque.
-                      Pariatur maxime velit quod recusandae libero est.
-                    </p>
-                    <h2>Web developer at coding addict</h2>
+              {testimonials.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="eachItemContainer" key={index}>
+                    <div className="eachItemWrapper">
+                      <h1 className="testimonialName">{item.name}</h1>
+                      <h3>{item.workingPlace}</h3>
+                      <p>{item.text}</p>
+                      <h2>{item.role}</h2>
+                    </div>
+                    <img src={item.photo} alt="" />
                   </div>
-                  <img
-                    src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="eachItemContainer">
-                  <div className="eachItemWrapper">
-                    <h1 className="testimonialName">John smilga</h1>
-                    <h3>Coding Addict</h3>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Aperiam rerum architecto cumque. Pariatur maxime velit
-                      quod recusandae libero est.dolor sit amet consectetur
-                      adipisicing elit. Aperiam rerum architecto cumque.
-                      Pariatur maxime velit quod recusandae libero est.
-                    </p>
-                    <h2>Web developer at coding addict</h2>
-                  </div>
-                  <img
-                    src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="eachItemContainer">
-                  <div className="eachItemWrapper">
-                    <h1 className="testimonialName">John smilga</h1>
-                    <h3>Coding Addict</h3>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Aperiam rerum architecto cumque. Pariatur maxime velit
-                      quod recusandae libero est.dolor sit amet consectetur
-                      adipisicing elit. Aperiam rerum architecto cumque.
-                      Pariatur maxime velit quod recusandae libero est.
-                    </p>
-                    <h2>Web developer at coding addict</h2>
-                  </div>
-                  <img
-                    src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="eachItemContainer">
-                  <div className="eachItemWrapper">
-                    <h1 className="testimonialName">John smilga</h1>
-                    <h3>Coding Addict</h3>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Aperiam rerum architecto cumque. Pariatur maxime velit
-                      quod recusandae libero est.dolor sit amet consectetur
-                      adipisicing elit. Aperiam rerum architecto cumque.
-                      Pariatur maxime velit quod recusandae libero est.
-                    </p>
-                    <h2>Web developer at coding addict</h2>
-                  </div>
-                  <img
-                    src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="eachItemContainer">
-                  <div className="eachItemWrapper">
-                    <h1 className="testimonialName">John smilga</h1>
-                    <h3>Coding Addict</h3>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Aperiam rerum architecto cumque. Pariatur maxime velit
-                      quod recusandae libero est.dolor sit amet consectetur
-                      adipisicing elit. Aperiam rerum architecto cumque.
-                      Pariatur maxime velit quod recusandae libero est.
-                    </p>
-                    <h2>Web developer at coding addict</h2>
-                  </div>
-                  <img
-                    src="https://www.shutterstock.com/image-photo/headshot-close-portrait-latin-confident-600nw-2303502257.jpg"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
               <div className="slider-controler">
                 <div className="sliderWrapper">
                   <div className="swiper-button-prev"></div>

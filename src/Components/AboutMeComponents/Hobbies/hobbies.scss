@@ -1,6 +1,9 @@
 .hobbiesContainer {
   padding: 10px 100px 10px;
   @media (max-width: 1200px) {
+    padding: 30px !important;
+  }
+  @media (max-width: 600px) {
     padding: 10px !important;
   }
   .hobbiesWrapper {

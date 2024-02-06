@@ -1,7 +1,13 @@
 .introductionContainer {
   padding: 50px 100px;
   @media (max-width: 1200px) {
-    padding: 30px !important;
+    padding: 30px 10px !important;
+    .glass-container {
+      width: 46% !important;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 10px !important;
     .glass-container {
       width: 46% !important;
     }

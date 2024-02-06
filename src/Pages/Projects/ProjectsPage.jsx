@@ -6,6 +6,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { RiExternalLinkFill } from "react-icons/ri";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { DiGithubFull } from "react-icons/di";
+import { GrDeploy } from "react-icons/gr";
 import data from "../../utils/data/index.json";
 import { Link } from "react-router-dom";
 
@@ -99,17 +100,29 @@ const ProjectsPage = () => {
                   {projects.githublink === "private" ? (
                     <p className="private">Private Github</p>
                   ) : (
-                    <Link
-                      to={`${projects.githublink}`}
-                      className="githubButton"
-                    >
-                      <DiGithubFull color="#00abfa" size={28} />
-                      <RiExternalLinkFill
-                        size={28}
-                        color="#00abfa"
-                        className="linkIcon"
-                      />
-                    </Link>
+                    <>
+                      <Link
+                        to={`${projects.githublink}`}
+                        className="githubButton"
+                      >
+                        <DiGithubFull color="#00abfa" size={22} />
+                        <RiExternalLinkFill
+                          size={22}
+                          color="#00abfa"
+                          className="linkIcon"
+                        />
+                      </Link>
+                      <Link
+                        to={`${projects.deployedlink}`}
+                        className="deployedLink"
+                      >
+                        <GrDeploy
+                          size={22}
+                          color="#00abfa"
+                          className="linkIcon"
+                        />
+                      </Link>
+                    </>
                   )}
                 </div>
               </div>

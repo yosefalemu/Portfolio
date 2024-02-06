@@ -272,6 +272,7 @@
       "projectTitle": "Music Player App For Addis Software Internship Application",
       "projectDescription": "Transform the Music Player App for Addis Software Internship Application Program by incorporating advanced features. Streamlined processes will empower the development team to efficiently manage and enhance the application, optimizing user experience and showcasing your programming capabilities during the internship application process.",
       "githublink": "https://github.com/yosefalemu/music-player-app-fullstack",
+      "deployedlink": "https://effervescent-pithivier-bea5b5.netlify.app/",
       "mainimage": "./images/music/home.png",
       "images": [
         "./images/music/albums.png",
@@ -310,6 +311,7 @@
       "projectTitle": "Exploring The Dynamic Features Of Gym For Optimal Gym Operations",
       "projectDescription": "Elevate your gym experience with a cutting-edge application designed for seamless fitness management. Track workouts, manage memberships, and foster real-time communication, enhancing overall gym operations and member satisfaction.",
       "githublink": "https://github.com/yosefalemu/react-typescript-tailwind-gym-website",
+      "deployedlink": "https://visionary-dusk-0a0277.netlify.app/",
       "mainimage": "./images/gym/home.png",
       "images": [
         "./images/gym/home.png",
@@ -352,6 +354,40 @@
       "to": "current",
       "content": "My current role at the Ethiopian Federal Police has been particularly impactful as I contribute to the development and implementation of a Private Security Agent Management System. This project involves creating a comprehensive and efficient system to manage private security personnel. Working with the Ethiopian Federal Police allows me to leverage my skills in technology to enhance security operations and streamline management processes.",
       "image": "./images/experiences/federal.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Prof. Mengesha Ayene",
+      "workingPlace": "Wollo University",
+      "text": "Working with Yosef has been a privilege. His dedication to academic excellence and innovative thinking is truly commendable. Yosef Alemu consistently demonstrates exceptional leadership and commitment to his studies. His contributions have greatly enriched our academic community at Wollo University.",
+      "role": "Academic President at Wollo University",
+      "photo": "./images/testimonials/mengesha.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Hailemariam Arega",
+      "workingPlace": "Bloomberg LP",
+      "text": "Collaborating with Yosef has been a rewarding experience. His unwavering commitment to academic excellence and creative problem-solving is truly inspiring.",
+      "role": "Incoming SWE @ Bloomberg LP",
+      "photo": "./images/testimonials/haile.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ayana Murad",
+      "workingPlace": "Ministry of Innovation and Technology",
+      "text": "Completing tasks on time and tackling complex challenges effortlessly, Yosef has showcased exceptional dedication and skill. His contributions to our ICT department have been invaluable, consistently exceeding expectations. We greatly appreciate Yosef's commitment to excellence.",
+      "role": "Ict head @ MinT",
+      "photo": "./images/testimonials/ayana.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Demissie Yilma",
+      "workingPlace": "Ethiopian Federal Police",
+      "text": "Consistently delivering on time and adeptly handling intricate tasks, Yosef Alemu has demonstrated remarkable dedication and proficiency. His contributions to our software and database department have been indispensable, consistently surpassing our expectations",
+      "role": "Software and Database head @ EFPC",
+      "photo": "./images/testimonials/federal.jpg"
     }
   ]
 }
