@@ -8,7 +8,7 @@ const Tools = () => {
     <div className="toolsContainer">
       <div className="toolsWrapper">
         {skills?.map((item, index) => (
-          <React.Fragment>
+          <React.Fragment key={index}>
             <div className="glass-container">
               <div className="glass-content">
                 <div className="imageContainer">

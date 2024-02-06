@@ -30,7 +30,6 @@ const NavBar = () => {
 
   const isActive = (route) => {
     const result = location.pathname === `/${route}`;
-    console.log(`Route: ${route}, IsActive: ${result}`);
     return result;
   };
 

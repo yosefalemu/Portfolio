@@ -8,7 +8,7 @@ const Frontend = () => {
     <div className="frontendContainer">
       <div className="frontendWrapper">
         {skills?.map((item, index) => (
-          <React.Fragment>
+          <React.Fragment key={index}>
             <div className="glass-container">
               <div className="glass-content">
                 <div className="imageContainer">

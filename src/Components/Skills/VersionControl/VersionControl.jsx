@@ -10,7 +10,7 @@ const VersionControl = () => {
     <div className="versionControlContainer">
       <div className="versionControlWrapper">
         {skills?.map((item, index) => (
-          <React.Fragment>
+          <React.Fragment key={index}>
             <div className="glass-container">
               <div className="glass-content">
                 <div className="imageContainer">

@@ -9,7 +9,6 @@ import { FiGithub } from "react-icons/fi";
 import { FaStackOverflow } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import toast from "react-hot-toast";
 
 const ContactMePage = () => {
   const form = useRef();
@@ -33,15 +32,9 @@ const ContactMePage = () => {
       )
       .then(
         (result) => {
-          toast.success("message sent");
-          console.log(result.text);
-          console.log("message sent");
           setData(true);
         },
-        (error) => {
-          toast.error(error.text);
-          console.log(error.text);
-        }
+        (error) => {}
       );
   };
   return (

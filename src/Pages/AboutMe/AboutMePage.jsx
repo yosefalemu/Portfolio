@@ -36,8 +36,6 @@ const AboutMePage = () => {
     100
   }%`;
 
-  console.log(borderBottomWidth);
-
   return (
     <div>
       <NavBar />

@@ -55,7 +55,7 @@ const Links = () => {
       {items.map((item) => (
         <motion.div
           onClick={() => navigate(item.onClick)}
-          key={item}
+          key={item.text}
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
