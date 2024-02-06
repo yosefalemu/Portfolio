@@ -7,7 +7,7 @@ import { MdOutlineAssignment } from "react-icons/md";
 import { RiGroupLine } from "react-icons/ri";
 import { MdOutlineContactPage } from "react-icons/md";
 import { useLocation, useNavigate } from "react-router-dom";
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ const NavBar = () => {
       </div>
       {isBelowMediumScreen && (
         <div className="sideBar">
-          <SideBar />
+          <Sidebar />
         </div>
       )}
       {!isBelowMediumScreen && (
