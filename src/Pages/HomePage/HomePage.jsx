@@ -14,20 +14,17 @@ import { pdfjs } from "react-pdf";
 import { Document, Page } from "react-pdf";
 import { init } from "ityped";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
-  import.meta.url
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const HomePage = () => {
   const textRef = useRef();
   const [resumeModal, setResumeModal] = useState(false);
-  const [numPages, setNumPages] = useState();
-  const [pageNumber, setPageNumber] = useState(1);
+  const [numPages, setNumPages] = useState(null);
 
-  function onDocumentLoadSuccess() {
-    setNumPages(numPages?._pdfInfo?.numPages);
-  }
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
@@ -195,6 +192,7 @@ const HomePage = () => {
           <div className="resumeContainer">
             <div className="resumeWrapper">
               <div className="resumeTop" onClick={() => setResumeModal(false)}>
+                {/* Add download link for the resume */}
                 <a href="./files/resume.pdf" download="resume.pdf">
                   <GiCloudDownload
                     size={28}
@@ -208,15 +206,15 @@ const HomePage = () => {
                   color="red"
                 />
               </div>
+              {/* Render the PDF document */}
               <Document
                 file="./files/resume.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
               >
-                <Page
-                  pageNumber={pageNumber}
-                  renderTextLayer={false}
-                  renderAnnotationLayer={false}
-                />
+                {/* Render the pages */}
+                {Array.from(new Array(numPages), (el, index) => (
+                  <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                ))}
               </Document>
             </div>
           </div>
